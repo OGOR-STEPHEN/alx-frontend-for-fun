@@ -1,0 +1,25 @@
+/* Container setup */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0; /* No margin or padding allowed */
+    width: 100%; /* Full-width container */
+}
+
+/* Box setup */
+.box {
+    flex: 1 1 20%; /* Allows for 5 boxes per row if container width permits */
+    height: 100px; /* Fixed height for all boxes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Custom colors for each box */
+.box1 { background-color: #FF5733; } /* Red-orange */
+.box2 { background-color: #33FF57; } /* Green */
+.box3 { background-color: #3357FF; } /* Blue */
+.box4 { background-color: #FF33A6; } /* Pink */
+.box5 { background-color: #FFD700; } /* Gold */
