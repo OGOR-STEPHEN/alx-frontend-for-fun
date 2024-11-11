@@ -657,10 +657,6 @@
     transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
   
-  .card-work:hover .card-inner {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
   .card-work .card-title {
     text-align: center;
     margin: 0;
@@ -669,6 +665,7 @@
   }
   
   .card-work .card-title a {
+    opacity: 0;
     display: block;
     text-decoration: none;
     padding-top: 45%;
@@ -701,15 +698,15 @@
     }
 
     .card-work .card-title a:focus{
-        opacity: 1;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
+      opacity: 1;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     .card-work:hover .card-title a{
-        opacity: 1;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
+      opacity: 1;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
     }
   
     .card-work:hover .card-image {
