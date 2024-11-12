@@ -1,43 +1,54 @@
-ul {
-    display: flex;
-    list-style: none;
+/* Basic reset */
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-li {
-    position: relative;
-    width: 150px; /* Adjust as needed */
-    height: 250px; /* Adjust as needed */
-    margin: 0 10px;
-    padding-top: 20px;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
     font-family: Arial, sans-serif;
-    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex; /* Arrange items side by side */
+    gap: 20px; /* Space between icons */
+}
+
+/* Styling each list item */
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-weight: bold;
-    text-align: center;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    font-size: 18px;
+    color: #333;
 }
 
+/* Icon styling */
 .icon {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    background-image: url('0-sprite.png');
-    background-repeat: no-repeat;
+    display: block;
+    width: 100px; /* Adjust to icon size */
+    height: 100px; /* Adjust to icon size */
+    background-image: url('0-sprite.png'); /* Use the path to the new image */
+    background-size: 300px 100px; /* Adjust to fit the sprite dimensions */
+    margin-top: 10px;
 }
 
+/* Specific positions for each icon */
 .i-html {
-    background-position: 0px 0px; /* Replace with the actual position of the HTML icon */
+    background-position: 0 0;
 }
 
 .i-css {
-    background-position: -100px 0px; /* Replace with the actual position of the CSS icon */
+    background-position: -100px 0;
 }
 
 .i-js {
-    background-position: -200px 0px; /* Replace with the actual position of the JavaScript icon */
+    background-position: -200px 0;
 }
