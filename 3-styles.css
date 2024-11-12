@@ -1,0 +1,109 @@
+/* Basic styling reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Menu styling */
+.menu {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+/* Hide menu items initially */
+.menu-item {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #c0392b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    transform: scale(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Arrange menu items in a vertical line */
+.menu-item:nth-child(3) { /* First item */
+    top: 70px;
+}
+.menu-item:nth-child(4) { /* Second item */
+    top: 140px;
+}
+.menu-item:nth-child(5) { /* Third item */
+    top: 210px;
+}
+.menu-item:nth-child(6) { /* Fourth item */
+    top: 280px;
+}
+.menu-item:nth-child(7) { /* Fifth item */
+    top: 350px;
+}
+
+/* Menu button styling (hamburger icon) */
+.menu-open-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #c0392b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.menu-line-1 {
+    transform: translateY(-10px);
+}
+
+.menu-line-2 {}
+
+.menu-line-3 {
+    transform: translateY(10px);
+}
+
+/* Menu expansion on hover */
+.menu:hover .menu-item {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transform hamburger icon to an "X" on hover */
+.menu:hover .menu-line-1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu:hover .menu-line-2 {
+    opacity: 0;
+}
+
+.menu:hover .menu-line-3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}

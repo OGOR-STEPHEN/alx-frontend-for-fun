@@ -1,0 +1,20 @@
+h2 a {
+    text-decoration: none;
+    color: #800020; /* Adjust color as needed */
+    position: relative;
+}
+
+h2 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust based on spacing */
+    width: 0;
+    height: 2px; /* Adjust thickness as needed */
+    background-color: #800020;
+    transition: width 0.3s ease-in-out;
+}
+
+h2 a:hover::after {
+    width: 100%;
+}
