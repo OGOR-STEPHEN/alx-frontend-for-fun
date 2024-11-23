@@ -1,0 +1,27 @@
+/* Creating H* tags with font sizes using @for loop */
+
+@for $i from 1 through 5 {
+  h#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+h1 {
+  font-size: 1px;
+}
+
+h2 {
+  font-size: 2px;
+}
+
+h3 {
+  font-size: 3px;
+}
+
+h4 {
+  font-size: 4px;
+}
+
+h5 {
+  font-size: 5px;
+}

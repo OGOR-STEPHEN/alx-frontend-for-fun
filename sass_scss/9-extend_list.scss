@@ -1,0 +1,18 @@
+/* Styling .info, .success, and .warning classes with @extend */
+
+.info {
+    // Font size for .info class
+    font-size: 12px;
+}
+
+.success {
+    // Extend .info class and add text color
+    @extend .info;
+    color: #00FF00;
+}
+
+.warning {
+    // Extend .info class and add text color
+    @extend .info;
+    color: #FF0000;
+}
