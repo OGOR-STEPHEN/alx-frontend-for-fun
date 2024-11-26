@@ -1,6 +1,13 @@
-/* 10-colors.scss */
+@import '10-colors';
 
-// Define color variables
-$red: #FF0000;
-$green: #00FF00;
-$blue: #0000FF;
+.red {
+  color: $red;
+}
+
+.green {
+  color: $green;
+}
+
+.blue {
+  color: $blue;
+}

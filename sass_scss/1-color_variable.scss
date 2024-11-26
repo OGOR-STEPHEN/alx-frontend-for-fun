@@ -1,9 +1,12 @@
-/* Assigning text color using a Sass variable */
-
-// Define the text color variable
+// Define a variable for the text color
 $text-color: #3D3D3D;
 
-// Apply the text color to body and p
-body, p {
-    color: $text-color;
+// Assign the text color to body
+body {
+  color: $text-color;
+}
+
+// Assign the text color to p
+p {
+  color: $text-color;
 }

@@ -1,37 +1,10 @@
 /* My style */
 
-$list_to_sort: 5, 3, 8, 1, 2;
+// Define the list to sort
+$list_to_sort: john, anna, zoe, kim, felicia, carrie;
 
-// Function to sort the list
-@function sort-list($list) {
-  $sorted: ();
-  $remaining: $list;
+// Sort the list
+$sorted_list: sort($list_to_sort);
 
-  @while length($remaining) > 0 {
-    $min: nth($remaining, 1);
-    @each $item in $remaining {
-      @if $item < $min {
-        $min: $item;
-      }
-    }
-    $sorted: append($sorted, $min);
-    $remaining: remove-value($remaining, $min);
-  }
-
-  @return $sorted;
-}
-
-// Utility to remove a value from a list
-@function remove-value($list, $value) {
-  $result: ();
-  @for $i from 1 through length($list) {
-    @if nth($list, $i) != $value {
-      $result: append($result, nth($list, $i));
-    }
-  }
-  @return $result;
-}
-
-$sorted_list: sort-list($list_to_sort);
-
+// Print the sorted list using debug
 @debug $sorted_list;
